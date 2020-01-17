@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import Display from './components/display.js';
 
+
 class App extends React.Component {
   constructor(props) {
     super(props)
@@ -30,8 +31,8 @@ class App extends React.Component {
   render() {
     console.log("This is state set by axios call:", this.state.data)
   return (
-    <div className="App">
-      <Display playerData={this.state.data} />
+    <div data-testid='test' className="App">
+      <Display  playerData={this.state.data} />
     </div>
   );
   }
