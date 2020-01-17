@@ -1,7 +1,8 @@
 import React from 'react';
-
+import PlayerCard from './playerCard.js';
+ 
 function Display(props) {
-    console.log("These are props being received in display component:", props.playerData)
+    // console.log("These are props being received in display component:", props.playerData)
     return(
         <div>
             <h1>Hello from Display Component</h1>
@@ -9,7 +10,7 @@ function Display(props) {
             {
                     props.playerData.map((player) => {
                         return(
-                            <h6> {player.name} </h6>
+                            <PlayerCard player={player} />
                         )
                     })
                 }
